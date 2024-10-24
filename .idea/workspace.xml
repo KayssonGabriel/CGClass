@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38585b9d-a00e-4bec-b01d-1a5fdaa2f5e8" name="Changes" comment="First commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Vitorhenriquesilvadesa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Vitorhenriquesilvadesa/CGClass.git&quot;,
+    &quot;accountId&quot;: &quot;1c473d75-37dd-4c79-83d8-7ca521848027&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nIXvgK97brIn3E0xcN4kGzSvQm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CGCLass.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/home/vitor/IdeaProjects/CGClass/src/main/java/org/gear/framework/core/service",
+    "last_opened_file_path": "/home/vitor/IdeaProjects/CGClass",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/vitor/IdeaProjects/CGClass/src/main/java/org/cgclass/Main.java",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.cgclass.event" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CGCLass" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.cgclass.Main" />
+      <module name="CGClass" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38585b9d-a00e-4bec-b01d-1a5fdaa2f5e8" name="Changes" comment="" />
+      <created>1728661797426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728661797426</updated>
+      <workItem from="1728661798577" duration="30000" />
+      <workItem from="1728665485896" duration="4948000" />
+      <workItem from="1728671947502" duration="1426000" />
+      <workItem from="1728772378557" duration="3079000" />
+      <workItem from="1728821753540" duration="1217000" />
+      <workItem from="1728830327316" duration="8022000" />
+      <workItem from="1728859183258" duration="67000" />
+      <workItem from="1728937388274" duration="1375000" />
+      <workItem from="1729267592382" duration="7152000" />
+      <workItem from="1729775930983" duration="262000" />
+      <workItem from="1729776197662" duration="159000" />
+    </task>
+    <task id="LOCAL-00001" summary="First Commit.">
+      <option name="closed" value="true" />
+      <created>1728670883114</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728670883114</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Wrapping OpenGL functions in GraphicContext and Window classes.">
+      <option name="closed" value="true" />
+      <created>1728672949037</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728672949037</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Creating application architecture.">
+      <option name="closed" value="true" />
+      <created>1728777246465</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728777246465</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Creating application architecture.">
+      <option name="closed" value="true" />
+      <created>1728825006922</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728825006922</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Creating shader compilation pipeline.">
+      <option name="closed" value="true" />
+      <created>1728844313827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728844313827</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Back to code without shader wrapper.">
+      <option name="closed" value="true" />
+      <created>1728937971875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728937971875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Back to code without shader wrapper.">
+      <option name="closed" value="true" />
+      <created>1728938085468</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728938085468</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Back to code without shader wrapper.">
+      <option name="closed" value="true" />
+      <created>1729267764259</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729267764259</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixing">
+      <option name="closed" value="true" />
+      <created>1729269543761</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729269543761</updated>
+    </task>
+    <task id="LOCAL-00010" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1729776111716</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729776111716</updated>
+    </task>
+    <task id="LOCAL-00011" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1729776156658</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729776156658</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit." />
+    <MESSAGE value="Wrapping OpenGL functions in GraphicContext and Window classes." />
+    <MESSAGE value="Creating application architecture." />
+    <MESSAGE value="Creating shader compilation pipeline." />
+    <MESSAGE value="Back to code without shader wrapper." />
+    <MESSAGE value="Fixing" />
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
