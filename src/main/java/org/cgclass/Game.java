@@ -43,8 +43,8 @@ public class Game extends Application {
     public void start() {
 
         shader = new Shader(
-                "/home/vitor/IdeaProjects/CGClass/src/main/resources/shader.vert",
-                "/home/vitor/IdeaProjects/CGClass/src/main/resources/shader.frag");
+                "src/main/resources/shader.vert",
+                "src/main/resources/shader.frag");
 
         transformationMatrix.identity();
         transformationMatrix.rotate((float) Math.toDegrees(60),
