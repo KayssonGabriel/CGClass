@@ -15,7 +15,7 @@
         <lwjgl.version>3.3.4</lwjgl.version>
         <joml.version>1.10.7</joml.version>
         <joml-primitives.version>1.10.0</joml-primitives.version>
-        <lwjgl.natives>natives-linux</lwjgl.natives>
+        <lwjgl.natives>natives-windows</lwjgl.natives>
     </properties>
 
     <dependencyManagement>

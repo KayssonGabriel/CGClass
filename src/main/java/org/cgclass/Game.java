@@ -10,12 +10,14 @@ import org.cgclass.shader.ShaderProgram;
 import org.gear.framework.application.Application;
 import org.gear.framework.core.service.event.reactive.Reactive;
 import org.gear.framework.core.service.input.Input;
+import org.joml.Matrix4f;
+import org.joml.Vector3f;
+import org.joml.Vector4f;
+
+import java.util.Random;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL45.*;
-
-import org.joml.*;
-import java.lang.Math;
 
 public class Game extends Application {
 
@@ -23,21 +25,45 @@ public class Game extends Application {
 
     boolean isSpacePressed = false;
 
+    // Triângulo 1 (à esquerda)
     float[] vertices = {
+            -squareSize - 1.5f, -squareSize, 0.0f,
+            squareSize - 1.5f, -squareSize, 0.0f,
+            squareSize - 1.5f, squareSize, 0.0f,
+    };
+
+    // Triângulo 2 (à direita)
+    float[] vertices2 = {
+            -squareSize + 1.5f, squareSize, 0.0f,
+            squareSize + 1.5f, squareSize, 0.0f,
+            -squareSize + 1.5f, -squareSize, 0.0f,
+    };
+
+    // Quadrado (ao centro)
+    float[] squareVertices = {
             -squareSize, -squareSize, 0.0f,
             squareSize, -squareSize, 0.0f,
             squareSize, squareSize, 0.0f,
+            -squareSize, squareSize, 0.0f
     };
 
+
     GraphicContext context = new GraphicContext(800, 800, "Hello OpenGL", Platform.Linux);
-    int VAO;
-    int VBO;
+    int VAO1;
+    int VBO1;
+    int VAO2;
+    int VBO2;
+    int VAO3;
+    int VBO3;
 
     Matrix4f transformationMatrix = new Matrix4f();
 
     Shader shader;
     ShaderCompiler compiler;
     ShaderProgram program;
+
+    Random random = new Random();
+    Vector4f color = new Vector4f(1.0f, 0.0f, 0.0f, 1.0f);
 
     @Override
     public void start() {
@@ -50,16 +76,17 @@ public class Game extends Application {
         transformationMatrix.rotate((float) Math.toDegrees(60),
                 new Vector3f(0f, 0f, 1f));
 
-        transformationMatrix.scale(2f);
+        transformationMatrix.scale(0.5f);
 
         compiler = new ShaderCompiler();
         program = compiler.compile(shader);
 
-        VAO = glGenVertexArrays();          // Cria um VAO e retorna seu ID
-        glBindVertexArray(VAO);             // Vincula o VAO para escrita ou leitura
+        // Configuração do primeiro triângulo -------------------------------------
+        VAO1 = glGenVertexArrays();          // Cria um VAO e retorna seu ID
+        glBindVertexArray(VAO1);             // Vincula o VAO para escrita ou leitura
 
-        VBO = glGenBuffers();               // Cria um buffer e retorna seu ID
-        glBindBuffer(GL_ARRAY_BUFFER, VBO); // Vincula o buffer ao VAO vinculado atualmente, que é o que criamos
+        VBO1 = glGenBuffers();               // Cria um buffer e retorna seu ID
+        glBindBuffer(GL_ARRAY_BUFFER, VBO1); // Vincula o buffer ao VAO vinculado atualmente, que é o que criamos
 
         // Define os dados do buffer atualmente vinculado, passamos o tipo do buffer, os dados,
         // e o tipo de escrita, passamos GL_STATIC_DRAW, significa que escreveremos os dados de
@@ -77,6 +104,31 @@ public class Game extends Application {
 
         // Por ultimo desvinculamos o VAO.
         glBindVertexArray(0);
+
+
+        // Configuração do segundo triângulo -------------------------------------
+        VAO2 = glGenVertexArrays();
+        glBindVertexArray(VAO2);
+
+        VBO2 = glGenBuffers();
+        glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+        glBufferData(GL_ARRAY_BUFFER, vertices2, GL_STATIC_DRAW);
+        glVertexAttribPointer(0, 3, GL_FLOAT, false, 3 * Float.BYTES, 0);
+        glEnableVertexAttribArray(0);
+        glBindVertexArray(0);
+
+        // Configuração do quadrado -------------------------------------
+        VAO3 = glGenVertexArrays();
+        glBindVertexArray(VAO3);
+
+        VBO3 = glGenBuffers();
+        glBindBuffer(GL_ARRAY_BUFFER, VBO3);
+        glBufferData(GL_ARRAY_BUFFER, squareVertices, GL_STATIC_DRAW);
+        glVertexAttribPointer(0, 3, GL_FLOAT, false, 3 * Float.BYTES, 0);
+        glEnableVertexAttribArray(0);
+        glBindVertexArray(0);
+
+
     }
 
     @Override
@@ -88,9 +140,10 @@ public class Game extends Application {
         program.bind();
         program.setMat4("uTransformationMatrix",
                 transformationMatrix);
+        program.setVec4("Color", color);
 
         // Vinculamos o VAO para usar seus dados
-        glBindVertexArray(VAO);
+        glBindVertexArray(VAO1);
 
         // Desenhamos na tela usando os dados deste VAO, dizemos para usar TRIÂNGULOS como primitiva
         // gráfica, dizemos para começar na posição da nossa lista de dados, e dizemos para desenhar
@@ -100,16 +153,41 @@ public class Game extends Application {
         // Desvinculamos o VAO.
         glBindVertexArray(0);
 
+
+        glBindVertexArray(VAO2);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glBindVertexArray(0);
+
+        glBindVertexArray(VAO3);
+        glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+        glBindVertexArray(0);
+
+
         // Trocamos o buffer que desenhamos de lugar com o buffer de saída da tela
         context.swapBuffers();
 
         // Capturamos os eventos da janela
         context.pollEvents();
 
+
         if (context.isCloseRequested()) {
             shutdown();
         }
 
+        // Rotacionar no sentido anti-horário
+        if (Input.isKeyPressed(GLFW_KEY_A)) {
+            transformationMatrix.rotate((float) Math.toRadians(-1), 0f, 0f, 1f);
+        }
+
+        // Rotacionar no sentido horário
+        if (Input.isKeyPressed(GLFW_KEY_D)) {
+            transformationMatrix.rotate((float) Math.toRadians(1), 0f, 0f, 1f);
+        }
+
+        // Definir cor aleatória
+        if (Input.isKeyPressed(GLFW_KEY_W)) {
+            color.set(random.nextFloat(), random.nextFloat(), random.nextFloat(), 1.0f);
+        }
 
         if (Input.isKeyPressed(GLFW_KEY_SPACE) && !isSpacePressed) {
             Application.dispatchEvent(new RecompileShaderEvent());
